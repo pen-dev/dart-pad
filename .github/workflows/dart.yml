@@ -55,12 +55,14 @@ jobs:
   # You may pin to the exact commit or the version.
   # uses: Cecilapp/GitHub-Pages-deploy@f26df39a27b93cae2c6aac5e07fdc556e8770247
         uses: Cecilapp/GitHub-Pages-deploy@3.1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           # A verified email.
           email: penlipenkovladislav@gmail.com
           # Where static files are.
           build_dir: build
           # Which branch to push files.
-          branch: gh-page
+          branch: gh-pages
           # The custom domain name.
 
