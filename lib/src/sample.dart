@@ -73,3 +73,10 @@ class MyWidget extends StatelessWidget {
   }
 }
 ''';
+
+final String pythonCode = r'''
+
+for i in range(10):
+    print(f'Hello, i')
+
+''';

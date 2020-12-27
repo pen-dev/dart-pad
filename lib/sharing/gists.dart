@@ -85,6 +85,13 @@ Gist createSampleFlutterGist() {
   return gist;
 }
 
+Gist createSamplePythonGist() {
+  var gist = Gist();
+  gist.description = Haikunator.haikunate();
+  gist.files.add(GistFile(name: 'main.py', content: sample.pythonCode));
+  return gist;
+}
+
 /// Find the best match for the given file names in the gist file info; return
 /// the file (or `null` if no match is found).
 GistFile chooseGistFile(Gist gist, List<String> names, [Function matcher]) {

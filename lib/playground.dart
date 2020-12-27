@@ -259,15 +259,16 @@ class Playground implements GistContainer, GistController {
 
     var samples = [
       Sample('215ba63265350c02dfbd586dfd30b8c3', 'Hello World', Layout.dart),
-      Sample('e93b969fed77325db0b848a85f1cf78e', 'Int to Double', Layout.dart),
-      Sample('b60dc2fc7ea49acecb1fd2b57bf9be57', 'Mixins', Layout.dart),
-      Sample('7d78af42d7b0aedfd92f00899f93561b', 'Fibonacci', Layout.dart),
-      Sample('b6409e10de32b280b8938aa75364fa7b', 'Counter', Layout.flutter),
-      Sample('b3ccb26497ac84895540185935ed5825', 'Sunflower', Layout.flutter),
-      Sample('ecb28c29c646b7f38139b1e7f44129b7', 'Draggables & physics',
-          Layout.flutter),
-      Sample('40308e0a5f47acba46ba62f4d8be2bf4', 'Implicit animations',
-          Layout.flutter),
+      Sample('215ba63265350c02dfbd586dfd30b8c3', 'Python: Hello World', Layout.python),
+      // Sample('e93b969fed77325db0b848a85f1cf78e', 'Int to Double', Layout.dart),
+      // Sample('b60dc2fc7ea49acecb1fd2b57bf9be57', 'Mixins', Layout.dart),
+      // Sample('7d78af42d7b0aedfd92f00899f93561b', 'Fibonacci', Layout.dart),
+      // Sample('b6409e10de32b280b8938aa75364fa7b', 'Counter', Layout.flutter),
+      // Sample('b3ccb26497ac84895540185935ed5825', 'Sunflower', Layout.flutter),
+      // Sample('ecb28c29c646b7f38139b1e7f44129b7', 'Draggables & physics',
+      //     Layout.flutter),
+      // Sample('40308e0a5f47acba46ba62f4d8be2bf4', 'Implicit animations',
+      //     Layout.flutter),
     ];
 
     var listElement = UListElement()
@@ -625,6 +626,8 @@ class Playground implements GistContainer, GistController {
         return createSampleFlutterGist();
       case Layout.html:
         return createSampleHtmlGist();
+      case Layout.python:
+        return createSamplePythonGist();
       default:
         return createSampleDartGist();
     }
@@ -1074,6 +1077,7 @@ enum LoadGistResult {
 }
 
 enum Layout {
+  python,
   flutter,
   dart,
   html,
