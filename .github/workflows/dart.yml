@@ -19,6 +19,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.1.4
 
       - name: Print Dart SDK version
         run: dart --version
@@ -41,10 +42,11 @@ jobs:
         run: dart test
         
       - name: Install vulcanize
-        run: apt-get install npm && npm install -g vulcanize
-        
+        run: npm install -g vulcanize
       - name: Build web
         run: dart tool/grind.dart build
+#       - name: Build web
+        
         
       - name: GH Pages deploy
   # You may pin to the exact commit or the version.
